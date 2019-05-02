@@ -1,167 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:fillViewport="true"
-    android:orientation="vertical">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_red_dark">
 
-    <RelativeLayout
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/btn_default" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="207dp"
+        android:layout_height="77dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="180dp"
+        android:src="@drawable/ic_launcher_background" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".captureBonus">
+        android:layout_above="@+id/link_sign_up"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/white"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.07"
+        android:lineSpacingExtra="0sp"
+        android:text="Sign in"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        android:textStyle="normal" />
 
-        <RelativeLayout
-            android:id="@+id/basicBonusInfo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="8dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/bonusName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:text="Bonus Na,e"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/bonusCategory"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/bonusName"
-                android:layout_alignParentStart="true"
-                android:text="Category" />
-
-            <TextView
-                android:id="@+id/bonusCode"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/bonusName"
-                android:layout_alignParentEnd="true"
-                android:text="Bonus Code" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/bonusLocationInfo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/basicBonusInfo"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="8dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/bonusAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="1600 Pennsylvania Ave NW" />
-
-            <TextView
-                android:id="@+id/bonusCity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/bonusAddress"
-                android:text="Washington" />
-
-            <TextView
-                android:id="@+id/bonusState"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/bonusAddress"
-                android:layout_marginLeft="8dp"
-                android:layout_toEndOf="@id/bonusCity"
-                android:text="DC" />
-
-            <TextView
-                android:id="@+id/bonusGPSLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/bonusCity"
-                android:layout_marginTop="8dp"
-                android:text="GPS:" />
-
-            <TextView
-                android:id="@+id/bonusGPSCoordinates"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/bonusCity"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="8dp"
-                android:text="XX.YYYYYY, -XX.YYYYYY" />
-
-        </RelativeLayout>
-
-        <ImageView
-            android:id="@+id/bonusMainImage"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/bonusLocationInfo"
-            android:layout_margin="8dp"
-            android:adjustViewBounds="true"
-            android:clickable="true"
-            android:focusable="true"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_launcher_background" />
-
-        <ImageView
-            android:id="@+id/bonusSecondaryImage"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/bonusMainImage"
-            android:layout_margin="8dp"
-            android:adjustViewBounds="true"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_launcher_foreground" />
-
-        <TextView
-            android:id="@+id/additionalBonusDetails"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/bonusSecondaryImage"
-            android:layout_marginStart="8dp"
-            android:text="Label Sample" />
-
-        <ImageView
-            android:id="@+id/bonusSampleImage"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/additionalBonusDetails"
-            android:layout_margin="8dp"
-            android:adjustViewBounds="true"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_launcher_foreground" />
-
-        <TextView
-            android:id="@+id/bonusFlavorLabel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/bonusSampleImage"
-            android:layout_marginStart="8dp"
-            android:text="Bonus Notes" />
-
-        <TextView
-            android:id="@+id/bonusFlavorContent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/bonusFlavorLabel"
-            android:layout_margin="8dp"
-            android:text="XXXXXXXXXXXXXXX" />
-
-        <Button
-            android:id="@+id/btnSubmitBonus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/bonusFlavorContent"
-            android:layout_centerHorizontal="true"
-            android:text="Bonus" />
-    </RelativeLayout>
-</ScrollView>
+    <TextView
+        android:id="@+id/link_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.07"
+        android:lineSpacingExtra="0sp"
+        android:text="No Account"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+</RelativeLayout>
