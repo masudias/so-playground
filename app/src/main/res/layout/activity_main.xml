@@ -1,56 +1,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/content_view"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/holo_red_dark">
+    android:layout_height="match_parent">
 
-    <ImageView
+    <com.example.masud.stackoverflow.utils.TouchImageView
+        android:id="@+id/img"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@android:drawable/btn_default" />
-
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="207dp"
-        android:layout_height="77dp"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="180dp"
-        android:src="@drawable/ic_launcher_background" />
-
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/link_sign_up"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@android:color/white"
-        android:fontFamily="sans-serif-medium"
-        android:letterSpacing="0.07"
-        android:lineSpacingExtra="0sp"
-        android:text="Sign in"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="16sp"
-        android:textStyle="normal" />
-
-    <TextView
-        android:id="@+id/link_sign_up"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="100dp"
-        android:fontFamily="sans-serif-medium"
-        android:gravity="center_horizontal"
-        android:letterSpacing="0.07"
-        android:lineSpacingExtra="0sp"
-        android:text="No Account"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        android:textStyle="normal" />
+        android:src="@drawable/ic_launcher_foreground" />
 </RelativeLayout>
