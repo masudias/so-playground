@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:bottom="5dp"
-        android:drawable="@mipmap/ic_launcher_round"
-        android:left="1dp"
-        android:top="5dp" />
-    <item android:drawable="@drawable/image_background" />
-</layer-list>
