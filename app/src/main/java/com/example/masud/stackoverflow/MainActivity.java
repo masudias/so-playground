@@ -12,8 +12,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final TextView tw = findViewById(R.id.txt);
-        Button btn = findViewById(R.id.btn);
+        final TextView tw = findViewById(R.id.twText);
+        Button btn = findViewById(R.id.btnChecke);
 
         btn.setOnClickListener(v -> {
             tw.setText("Changed text");
